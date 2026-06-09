@@ -1,6 +1,6 @@
 ﻿import mongoose from 'mongoose';
 
-const MONGODB_URI = 'mongodb://localhost:27017/pastel-markdown';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/get-text';
 
 const DataSchema = new mongoose.Schema({
   identifier: { type: String, required: true, unique: true, index: true },
